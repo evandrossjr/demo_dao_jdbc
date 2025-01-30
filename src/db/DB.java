@@ -64,7 +64,6 @@ public class DB {
 		if (st != null) {
 			try {
 				st.close();
-				System.out.println("Statement Fechado");
 			} catch (SQLException e) {
 				throw new DbException(e.getMessage());
 			}
@@ -75,8 +74,6 @@ public class DB {
 		if (rs != null) {
 			try {
 				rs.close();
-				System.out.println("ResultSet Fechado");
-
 			} catch (SQLException e) {
 				throw new DbException(e.getMessage());
 			}
