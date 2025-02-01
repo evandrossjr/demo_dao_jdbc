@@ -29,6 +29,14 @@ public class ProgramDep {
 		System.out.println("\n===TEST 5: department update ====");
 
 		System.out.println("\n===TEST 6: department delete ====");
+		System.out.println("Digite o Id a ser deletado: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Departamento Deletado!");
+		
+		
+		sc.close();
+		
 
 	}
 
