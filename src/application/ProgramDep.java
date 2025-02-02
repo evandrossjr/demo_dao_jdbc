@@ -16,19 +16,22 @@ public class ProgramDep {
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();		
 		
 		System.out.println("===TEST 1: department findById ====");
+		Department department = departmentDao.findById(3);
+		System.out.println(department);
 
-		System.out.println("\n===TEST 2: department findByDepartment ====");
+		System.out.println("\n===TEST 2: department findByAll ====");
 
-		System.out.println("\n===TEST 3: department findByAll ====");
-
-		System.out.println("\n===TEST 4: department insert ====");
+		System.out.println("\n===TEST 3: department insert ====");
 		Department newDepartment = new Department(null,"kids");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserido novo departamento " + newDepartment.getId());
 
-		System.out.println("\n===TEST 5: department update ====");
-
-		System.out.println("\n===TEST 6: department delete ====");
+		System.out.println("\n===TEST 4: department update ====");
+		
+		
+		
+		
+		System.out.println("\n===TEST 5: department delete ====");
 		System.out.println("Digite o Id a ser deletado: ");
 		int id = sc.nextInt();
 		departmentDao.deleteById(id);
