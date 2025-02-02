@@ -65,12 +65,13 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-					"UPDATE department"
-					+ "SET Name = ?"
+					"UPDATE department "
+					+ "SET Name = ? "
 					+ "WHERE Id = ?",
 					Statement.RETURN_GENERATED_KEYS);
 			
 			st.setString(1, obj.getName());
+			st.setInt(2, obj.getId());
 			
 			st.executeUpdate();
 		}

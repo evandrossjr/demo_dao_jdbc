@@ -33,6 +33,10 @@ public class ProgramDep {
 		System.out.println("Inserido novo departamento " + newDepartment.getId());
 
 		System.out.println("\n===TEST 4: department update ====");
+		department = departmentDao.findById(9);
+		department.setName("Finance");
+		departmentDao.update(department);
+		System.out.println("Cadastro atualizado");
 		
 		
 		
